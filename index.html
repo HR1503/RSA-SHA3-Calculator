@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="Stylesheet"
+    href="rsa.css">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1,
+   shrink-to-fit=no">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <title>RSA Encryption - Decryption </title> 
+</head>
+
+<body>
+    
+    <h1 style="text-align: center;background-color: rgb(0, 204, 255);font-style: inherit;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+     'Open Sans', 'Helvetica Neue', sans-serif ;font-feature-settings: vpal;color: whitesmoke;"  >&#127760 RSA & SHA-3 Encryption - Decryption &#127760</h1><hr>
+    <br>
+    <!-- <p><h2 style="text-align :left;color: whitesmoke;"></h2>Steps : </p> -->
+    <h3 style="color: rgb(11, 85, 155);font-family: monospace; text-underline-position: below;" >&#9755<u> Asymmetric cryptography algorithm :  </u></h3>
+
+    <ul style="font-size: 0.7cm;font-family: cursive;">
+        <li>Select two prime no's. p & q .</li>
+        <li>Now, add a small exponent e .  </li>
+        <li>then, add Original Message numbers. </li>
+    </ul><hr><br>
+    <div class="container" style="padding-top:50px">
+        
+    <form method='post' action="/" autocomplete="on">
+    
+        <div class="form-group row">
+            <div class='col-sm-6'>
+                <h3 style="font-family: cursive;">&#9658 Enter value of p : </h3>
+            </div>
+
+            <div class="col-sm-6">
+                <input type="number" class="form-control" name="p" value="{{p}}"  placeholder="Enter p">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class='col-sm-6'>
+                <h3 style="font-family: cursive;">&#9658 Enter value of q : </h3>
+            </div>
+
+            <div class="col-sm-6">
+                <input type="number" class="form-control" name="q"
+                value="{{q}}" placeholder="Enter q">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class='col-sm-6'>
+                <h3 style="font-family: cursive;">&#9658 Enter value of e : </h3>
+            </div>
+
+            <div class="col-sm-6">
+                <input type="number" class="form-control" name="publickeyone"
+                value="{{publickeyone}}" placeholder="Enter e">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class='col-sm-6'>
+                <h3 style="font-family: cursive;">&#9658 Enter Original Message : </h3>
+            </div>
+
+            <div class="col-sm-6">
+                <input type="number" class="form-control" name="originalmessage" value="{{originalmessage}}"  placeholder="Enter msg">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class='col-sm-6'>
+                <h3 style="font-family: cursive;">&#9658 Enter Worded Message for SHA-3 : </h3>
+            </div>
+
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="str" value="{{str}}"  placeholder="Enter Worded msg">
+            </div>
+        </div>
+
+        <div class='form-group row'>
+            <div style="text-align: center;font-size: 0.6cm;" class="col-sm-12">
+            <button type="submit" class="btn btn-primary">&#9679 Answer &#9679 </button>
+            </div>
+        </div>
+         
+   
+        <hr><br>
+        <div>
+         <p style="font-weight: bold; font-size: 30px; color: rgb(16, 156, 23)">&#9658 Encoded_message: {{Encoded_message}}</p>
+        </div>
+        
+        <div>
+           <p style="font-weight: bold; font-size: 30px; color: rgb(22, 158, 28)"> &#9658 Decoded_message: {{decoded_message}}</p>
+        </div>
+        <hr><br>
+
+        
+            <div>
+                <p style="font-weight: bold; font-size: 30px; color: rgb(22, 105, 201)">&#9658 Original Worded Message : {{x}}</p>
+            </div>
+               
+                <!-- <p style="color: rgb(24, 143, 223);font-size: 25px;font-weight: bold;" >{{x}}</p> -->
+                <!-- <p style="font-weight: bold; font-size: 30px; color: brown;"></p><p style="color: rgb(24, 143, 223);font-size: 25px;font-weight: bold;" >{{x}}</p> -->
+            
+    
+
+        <div>
+            <p style="font-weight: bold; font-size: 30px; color: brown;">&#9658 SHA3-256 Hash :</p><p style="color: gray;font-size: 25px;font-weight: bold;" >{{a}}</p>
+        </div>
+
+        <div>
+            <p style="font-weight: bold; font-size: 30px; color: brown;">&#9658 SHA3-384 Hash : </p><p style="color: gray;font-size: 25px;font-weight: bold;" >{{b}}</p>
+        </div>
+
+        <div>
+            <p style="font-weight: bold; font-size: 30px; color: brown;">&#9658 SHA3-512 Hash : </p><p style="color: gray;font-size: 25px;font-weight: bold;" >{{c}}</p>
+        </div>
+
+        <hr><br>
+
+
+    </form>
+</div>
+    
+        <h3 style="color: rgb(11, 85, 155);font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-underline-position: below;" >&#10025<u> DA-IICT, July 2021 </u></h3>
+        <h3>By : </h3>
+        <ul style="background-color: black;color: whitesmoke;font-size: 0.7cm;font-family: Arial Narrow bold;">
+            <li>Harsh Acharya</li>
+            <li>Dev Kabra</li>
+            <li>Dhruv Prajapati</li>
+            <li>Parth Prajapati</li>
+        </ul><hr><br>
+
+       
+   
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
